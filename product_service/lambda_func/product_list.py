@@ -4,8 +4,9 @@ def handler(event, context):
 
 
     products = [
-            {"id": "1", "name": "Product1", "price" 100},
-            {"id": "2", "name": "Product2", "price" 200},
+            {"id": "1", "title": "Product1", "description": "desc", "price" : 100},
+            {"id": "2", "title": "Product2", "description": "desc", "price" : 200},
+            {"id": "3", "title": "Product3", "description": "desc", "price": 300},
         ]
 
     return {'statusCode': 200,
@@ -14,5 +15,5 @@ def handler(event, context):
                 "Access-Control-Allow-Methods": "GET",
                 "content-type": "application/json"
             },
-            "body" :jsonduns: json: dumps(products)
+            'body' :json.dumps(products)
     }
